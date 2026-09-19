@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="إدارة أقسام ومنتجات Furniture Factory"
+    >
+
+    <title>إدارة الأقسام | Furniture Factory</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="../assets/images/logo.PNG" />
+
+    <!-- ================= GOOGLE FONT ================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- ================= ADMIN CSS ================= -->
+
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/categories.css">
+
+</head>
+
+<body class="admin-page">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <!-- LOGO -->
+
+         <div class="sidebar-logo">
+        <div class="admin-logo-icon">
+           <span >
+            <img src="../assets/images/logo.PNG" alt="logo"
+          /></span>
+        </div>
+
+        <div>
+            <strong> AL-TOQA </strong>
+
+            <span>التقي لاثاث المكتبي  </span>
+          </div>
+      </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav" aria-label="القائمة الرئيسية">
+<a href="dashboard.html" class="sidebar-link"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></span><span>لوحة التحكم</span></a>
+<a href="products.html" class="sidebar-link"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span><span>المنتجات</span></a>
+<a href="add-product.html" class="sidebar-link"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span><span>إضافة منتج</span></a>
+<a href="categories.html" class="sidebar-link"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span><span>الأقسام</span></a>
+<a href="featured.html" class="sidebar-link"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span>العروض المميزة</span></a>
+<a href="slider.html" class="sidebar-link"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span><span>الإعلانات والسلايدر</span></a>
+<a href="quotes.html" class="sidebar-link"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><span>طلبات عروض السعر</span></a>
+</nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="../index.html"
+                class="sidebar-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </span>
+
+                <span>
+                    عرض الموقع
+                </span>
+
+            </a>
+
+
+            <button
+                type="button"
+                class="sidebar-link logout-btn"
+                id="logoutBtn"
+            >
+
+                <span aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                </span>
+
+                <span>
+                    تسجيل الخروج
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="admin-main">
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="admin-topbar">
+
+            <div class="topbar-right">
+
+                <button
+                    type="button"
+                    class="mobile-sidebar-btn"
+                    id="sidebarToggle"
+                    aria-label="فتح القائمة"
+                    aria-controls="adminSidebar"
+                    aria-expanded="false"
+                >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+
+
+                <div>
+
+                    <h1>
+                        إدارة الأقسام
+                    </h1>
+
+                    <p>
+                        إدارة الأقسام الرئيسية والفرعية للكتالوج
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-left">
+
+                <button
+                    type="button"
+                    class="theme-btn"
+                    id="themeBtn"
+                    aria-label="تغيير الوضع"
+                    title="تغيير الوضع"
+                ></button>
+
+                <div class="admin-user"><div class="user-avatar">A</div><div><strong>Admin</strong><span>مدير النظام</span></div></div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <section class="admin-content">
+
+            <!-- PAGE HEADER -->
+
+            <div class="categories-page-header">
+
+                <div>
+
+                    <span>
+                        CATALOG CATEGORIES
+                    </span>
+
+                    <h2>
+                        الأقسام الرئيسية والفرعية
+                    </h2>
+
+                    <p>
+                        أضف أقسامًا فرعية مثل المكاتب والكراسي
+                        ووحدات التخزين داخل الأقسام الرئيسية.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 MAIN CATEGORIES
+            ================================================== -->
+
+            <div class="main-categories-grid">
+
+                <!-- OFFICE -->
+
+                <div
+                    class="main-category-card"
+                    data-main-category="office"
+                >
+
+                    <div class="main-category-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            OFFICE
+                        </span>
+
+                        <h3>
+                            أثاث مكتبي
+                        </h3>
+
+                        <strong
+                            class="category-count"
+                            data-count="office"
+                        >
+                            0 قسم فرعي
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HOTEL -->
+
+                <div
+                    class="main-category-card"
+                    data-main-category="hotel"
+                >
+
+                    <div class="main-category-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="1"/><rect x="8" y="6" width="2.2" height="2.2" fill="currentColor" stroke="none"/><rect x="13.8" y="6" width="2.2" height="2.2" fill="currentColor" stroke="none"/><rect x="8" y="11" width="2.2" height="2.2" fill="currentColor" stroke="none"/><rect x="13.8" y="11" width="2.2" height="2.2" fill="currentColor" stroke="none"/><rect x="8" y="16" width="2.2" height="2.2" fill="currentColor" stroke="none"/><rect x="13.8" y="16" width="2.2" height="2.2" fill="currentColor" stroke="none"/></svg>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            HOTEL
+                        </span>
+
+                        <h3>
+                            أثاث فندقي
+                        </h3>
+
+                        <strong
+                            class="category-count"
+                            data-count="hotel"
+                        >
+                            0 قسم فرعي
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HOME -->
+
+                <div
+                    class="main-category-card"
+                    data-main-category="home"
+                >
+
+                    <div class="main-category-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            HOME
+                        </span>
+
+                        <h3>
+                            أثاث منزلي
+                        </h3>
+
+                        <strong
+                            class="category-count"
+                            data-count="home"
+                        >
+                            0 قسم فرعي
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ADD SUB CATEGORY
+            ================================================== -->
+
+            <div class="category-form-card">
+
+                <div class="category-card-header">
+
+                    <div>
+
+                        <span>
+                            NEW CATEGORY
+                        </span>
+
+                        <h2>
+                            إضافة قسم فرعي
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <form id="categoryForm">
+
+                    <div class="category-form-grid">
+
+                        <!-- CATEGORY NAME -->
+
+                        <div class="form-field">
+
+                            <label for="categoryName">
+                                اسم القسم الفرعي
+                                <b>*</b>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="categoryName"
+                                placeholder="مثال: مكاتب"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- MAIN CATEGORY -->
+
+                        <div class="form-field">
+
+                            <label for="parentCategory">
+                                القسم الرئيسي
+                                <b>*</b>
+                            </label>
+
+                            <select
+                                id="parentCategory"
+                                required
+                            >
+
+                                <option value="">
+                                    اختر القسم الرئيسي
+                                </option>
+
+                                <option value="office">
+                                    أثاث مكتبي
+                                </option>
+
+                                <option value="hotel">
+                                    أثاث فندقي
+                                </option>
+
+                                <option value="home">
+                                    أثاث منزلي
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- IMAGE -->
+
+                        <div class="form-field full-width">
+
+                            <label for="categoryImage">
+                                صورة القسم
+                                <b>*</b>
+                            </label>
+
+                            <input
+                                type="file"
+                                id="categoryImage"
+                                accept="image/*"
+                                required
+                            >
+
+                            <small class="field-hint">
+                                اختر صورة واضحة للقسم الفرعي.
+                                الحد الأقصى المقترح 2MB.
+                            </small>
+
+                        </div>
+
+
+                        <!-- PREVIEW -->
+
+                        <div
+                            class="category-image-preview"
+                            id="categoryImagePreview"
+                        >
+
+                            <div>
+
+                                <span>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                                </span>
+
+                                <strong>
+                                    معاينة الصورة
+                                </strong>
+
+                                <small>
+                                    ستظهر الصورة هنا
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ACTIONS -->
+
+                    <div class="category-form-actions">
+
+                        <button
+                            type="reset"
+                            class="category-reset-btn"
+                            id="resetCategoryBtn"
+                        >
+                            إلغاء
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="category-save-btn"
+                        >
+
+                            <span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            </span>
+
+                            إضافة القسم
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- =================================================
+                 SUB CATEGORIES
+            ================================================== -->
+
+            <div class="subcategories-section">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span>
+                            SUB CATEGORIES
+                        </span>
+
+                        <h2>
+                            الأقسام الفرعية
+                        </h2>
+
+                    </div>
+
+
+                    <div class="category-filter">
+
+                        <button
+                            type="button"
+                            class="category-filter-btn active"
+                            data-filter="all"
+                        >
+                            الكل
+                        </button>
+
+                        <button
+                            type="button"
+                            class="category-filter-btn"
+                            data-filter="office"
+                        >
+                            مكتبي
+                        </button>
+
+                        <button
+                            type="button"
+                            class="category-filter-btn"
+                            data-filter="hotel"
+                        >
+                            فندقي
+                        </button>
+
+                        <button
+                            type="button"
+                            class="category-filter-btn"
+                            data-filter="home"
+                        >
+                            منزلي
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GRID -->
+
+                <div
+                    class="subcategories-grid"
+                    id="subcategoriesGrid"
+                ></div>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="categories-empty"
+                    id="categoriesEmpty"
+                >
+
+                    <div>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+
+                    <h3>
+                        لا توجد أقسام فرعية
+                    </h3>
+
+                    <p>
+                        ابدأ بإضافة أول قسم فرعي للكتالوج.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+         <footer class="admin-footer">
+        © 2026  AL-TOQA — لوحة إدارة الكتالوج
+      </footer>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/config.js"></script>
+    <script src="../js/admin.js"></script>
+
+    <script src="../js/categories.js"></script>
+
+</body>
+
+</html>

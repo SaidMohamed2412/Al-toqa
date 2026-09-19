@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>طلبات عروض السعر | لوحة التحكم</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="../assets/images/logo.PNG" />
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ADMIN CSS -->
+
+    <link rel="stylesheet" href="../css/admin.css" />
+
+    <link rel="stylesheet" href="../css/quotes.css" />
+  </head>
+
+  <body class="admin-page">
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="admin-sidebar">
+      <!-- LOGO -->
+
+      <div class="sidebar-logo">
+        <div class="admin-logo-icon">
+          <span> <img src="../assets/images/logo.PNG" alt="logo" /></span>
+        </div>
+
+        <div>
+          <strong> AL-TOQA </strong>
+
+          <span>التقي لاثاث المكتبي </span>
+        </div>
+      </div>
+
+      <!-- NAV -->
+
+      <nav class="sidebar-nav" aria-label="القائمة الرئيسية">
+        <a href="dashboard.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></span><span>لوحة التحكم</span></a
+        >
+        <a href="products.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span><span>المنتجات</span></a
+        >
+        <a href="add-product.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span><span>إضافة منتج</span></a
+        >
+        <a href="categories.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span><span>الأقسام</span></a
+        >
+        <a href="featured.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span>العروض المميزة</span></a
+        >
+        <a href="slider.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span><span>الإعلانات والسلايدر</span></a
+        >
+        <a href="quotes.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><span>طلبات عروض السعر</span></a
+        >
+      </nav>
+
+      <!-- SIDEBAR BOTTOM -->
+
+      <div class="sidebar-bottom">
+        <a
+          href="../products.html"
+          class="sidebar-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+
+          <span> عرض الكتالوج </span>
+        </a>
+
+        <button type="button" class="sidebar-link logout-btn" id="logoutBtn">
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span>
+
+          <span> تسجيل الخروج </span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="admin-main">
+      <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+      <header class="admin-topbar">
+        <div class="topbar-right">
+          <button
+            type="button"
+            class="mobile-sidebar-btn"
+            id="sidebarToggle"
+            aria-label="فتح القائمة"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+
+          <div>
+            <h1>طلبات عروض السعر</h1>
+
+            <p>إدارة ومتابعة طلبات العملاء</p>
+          </div>
+        </div>
+
+        <div class="topbar-left">
+          <button
+            type="button"
+            class="theme-btn"
+            id="themeBtn"
+            aria-label="تغيير الوضع"
+          ></button>
+
+          <a
+            href="../contact.html"
+            class="top-add-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            عرض النموذج
+          </a>
+
+          <div class="admin-user">
+            <div class="user-avatar">A</div>
+
+            <div>
+              <strong> Admin </strong>
+
+              <span> مدير النظام </span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+      <section class="admin-content">
+        <!-- PAGE HEADER -->
+
+        <div class="quotes-page-header">
+          <div>
+            <span> QUOTE REQUESTS </span>
+
+            <h2>طلبات عروض السعر</h2>
+
+            <p>يمكنك متابعة طلبات العملاء والتواصل معهم وتحديث حالة كل طلب.</p>
+          </div>
+        </div>
+
+        <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+        <div class="quotes-stats">
+          <div class="quote-stat-card">
+            <div class="quote-stat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg></div>
+
+            <div>
+              <span> إجمالي الطلبات </span>
+
+              <strong id="totalQuotes"> 0 </strong>
+            </div>
+          </div>
+
+          <div class="quote-stat-card">
+            <div class="quote-stat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+
+            <div>
+              <span> طلبات جديدة </span>
+
+              <strong id="newQuotes"> 0 </strong>
+            </div>
+          </div>
+
+          <div class="quote-stat-card">
+            <div class="quote-stat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+
+            <div>
+              <span> تم التواصل </span>
+
+              <strong id="contactedQuotes"> 0 </strong>
+            </div>
+          </div>
+
+          <div class="quote-stat-card">
+            <div class="quote-stat-icon">✓</div>
+
+            <div>
+              <span> مكتملة </span>
+
+              <strong id="completedQuotes"> 0 </strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================================================
+                 TOOLBAR
+            ================================================== -->
+
+        <div class="quotes-toolbar">
+          <!-- SEARCH -->
+
+          <div class="quotes-search">
+            <span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> </span>
+
+            <input
+              type="search"
+              id="quoteSearch"
+              placeholder="ابحث باسم العميل أو رقم الطلب أو الهاتف..."
+            />
+          </div>
+
+          <!-- STATUS -->
+
+          <select id="quoteStatusFilter" class="quote-filter">
+            <option value="all">كل الحالات</option>
+
+            <option value="new">جديد</option>
+
+            <option value="priced">تم التسعير</option>
+
+            <option value="contacted">تم التواصل</option>
+
+            <option value="completed">مكتمل</option>
+
+            <option value="cancelled">ملغي</option>
+          </select>
+
+          <!-- REFRESH -->
+
+          <button type="button" id="refreshQuotes" class="refresh-quotes-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg> تحديث
+          </button>
+        </div>
+
+        <!-- =================================================
+                 RESULTS INFO
+            ================================================== -->
+
+        <div class="quotes-results">
+          <span> عدد النتائج: </span>
+
+          <strong id="quotesResultsCount"> 0 </strong>
+        </div>
+
+        <!-- =================================================
+                 QUOTES TABLE
+            ================================================== -->
+
+        <div class="quotes-table-wrapper">
+          <div class="quotes-table" id="quotesTable">
+            <!-- JavaScript -->
+          </div>
+        </div>
+
+        <!-- =================================================
+                 EMPTY STATE
+            ================================================== -->
+
+        <div class="quotes-empty" id="quotesEmpty">
+          <div class="quotes-empty-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></div>
+
+          <h3>لا توجد طلبات عروض سعر</h3>
+
+          <p>عندما يقوم أحد العملاء بإرسال طلب عرض سعر سيظهر هنا.</p>
+        </div>
+      </section>
+
+      <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+      <footer class="admin-footer">© 2026 AL-TOQA — لوحة إدارة الكتالوج</footer>
+    </main>
+
+    <!-- =====================================================
+         QUOTE DETAILS MODAL
+    ====================================================== -->
+
+    <div class="quote-modal" id="quoteModal">
+      <div class="quote-modal-content">
+        <div class="quote-modal-header">
+          <div>
+            <span> QUOTE DETAILS </span>
+
+            <h3 id="modalQuoteTitle">تفاصيل الطلب</h3>
+          </div>
+
+          <button type="button" id="closeQuoteModal" class="close-quote-modal">
+            ×
+          </button>
+        </div>
+
+        <div class="quote-modal-body" id="quoteModalBody">
+          <!-- JavaScript -->
+        </div>
+
+        <div class="quote-modal-footer quote-editor-footer">
+          <button
+            type="button"
+            id="saveQuotePricing"
+            class="quote-primary-action"
+          >
+            حفظ التسعير
+          </button>
+          <button
+            type="button"
+            id="printQuotePdf"
+            class="quote-secondary-action"
+          >
+            PDF / طباعة
+          </button>
+          <button
+            type="button"
+            id="sendQuoteWhatsapp"
+            class="quote-whatsapp-action"
+          >
+            واتساب
+          </button>
+          <button
+            type="button"
+            id="closeQuoteModalBottom"
+            class="modal-close-btn"
+          >
+            إغلاق
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         DELETE MODAL
+    ====================================================== -->
+
+    <div class="quote-delete-modal" id="quoteDeleteModal">
+      <div class="quote-delete-content">
+        <div class="delete-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></div>
+
+        <h3>حذف طلب العرض؟</h3>
+
+        <p>هل أنت متأكد من حذف هذا الطلب؟ لا يمكن التراجع عن هذه العملية.</p>
+
+        <div class="delete-actions">
+          <button
+            type="button"
+            id="cancelQuoteDelete"
+            class="delete-cancel-btn"
+          >
+            إلغاء
+          </button>
+
+          <button
+            type="button"
+            id="confirmQuoteDelete"
+            class="delete-confirm-btn"
+          >
+            حذف الطلب
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/data.js"></script>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/admin.js"></script>
+
+    <script src="../js/quotes.js"></script>
+    <script src="../js/admin-quotes.js"></script>
+  </body>
+</html>

@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>تعديل المنتج | لوحة التحكم</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="../assets/images/logo.PNG" />
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ADMIN CSS -->
+
+    <link rel="stylesheet" href="../css/admin.css" />
+
+    <link rel="stylesheet" href="../css/edit-product.css" />
+  </head>
+
+  <body class="admin-page">
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="admin-sidebar">
+      <div class="sidebar-logo">
+        <div class="admin-logo-icon">
+          <span> <img src="../assets/images/logo.PNG" alt="logo" /></span>
+        </div>
+
+        <div>
+          <strong> AL-TOQA </strong>
+
+          <span>التقي لاثاث المكتبي </span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="القائمة الرئيسية">
+        <a href="dashboard.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></span><span>لوحة التحكم</span></a
+        >
+        <a href="products.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></span><span>المنتجات</span></a
+        >
+        <a href="add-product.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span><span>إضافة منتج</span></a
+        >
+        <a href="categories.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span><span>الأقسام</span></a
+        >
+        <a href="featured.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span>العروض المميزة</span></a
+        >
+        <a href="slider.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span><span>الإعلانات والسلايدر</span></a
+        >
+        <a href="quotes.html" class="sidebar-link"
+          ><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><span>طلبات عروض السعر</span></a
+        >
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a
+          href="../products.html"
+          class="sidebar-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+
+          <span> عرض الكتالوج </span>
+        </a>
+
+        <button type="button" class="sidebar-link logout-btn" id="logoutBtn">
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span>
+
+          <span> تسجيل الخروج </span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="admin-main">
+      <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+      <header class="admin-topbar">
+        <div class="topbar-right">
+          <button
+            type="button"
+            class="mobile-sidebar-btn"
+            id="sidebarToggle"
+            aria-label="فتح القائمة"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+
+          <div>
+            <h1>تعديل المنتج</h1>
+
+            <p>تعديل بيانات المنتج والصور والألوان</p>
+          </div>
+        </div>
+
+        <div class="topbar-left">
+          <button
+            type="button"
+            class="theme-btn"
+            id="themeBtn"
+            aria-label="تغيير الوضع"
+          ></button>
+
+          <a href="products.html" class="top-add-btn"> ← المنتجات </a>
+
+          <div class="admin-user">
+            <div class="user-avatar">A</div>
+
+            <div>
+              <strong> Admin </strong>
+
+              <span> مدير النظام </span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+      <section class="admin-content">
+        <!-- PAGE HEADER -->
+
+        <div class="edit-product-header">
+          <div>
+            <span> EDIT PRODUCT </span>
+
+            <h2>تعديل بيانات المنتج</h2>
+
+            <p>قم بتعديل البيانات المطلوبة ثم اضغط حفظ التعديلات.</p>
+          </div>
+
+          <a href="products.html" class="back-products-btn">
+            ← العودة للمنتجات
+          </a>
+        </div>
+
+        <!-- =================================================
+                 FORM
+            ================================================== -->
+
+        <form id="editProductForm" class="product-form">
+          <!-- =================================================
+                     BASIC INFORMATION
+                ================================================== -->
+
+          <div class="form-card">
+            <div class="form-card-header">
+              <span> BASIC INFORMATION </span>
+
+              <h3>البيانات الأساسية</h3>
+            </div>
+
+            <div class="form-card-body">
+              <!-- PRODUCT NAME -->
+
+              <div class="form-field">
+                <label for="productName">
+                  اسم المنتج
+                  <b>*</b>
+                </label>
+
+                <input
+                  type="text"
+                  id="productName"
+                  placeholder="أدخل اسم المنتج"
+                  required
+                />
+              </div>
+
+              <!-- PRODUCT CODE -->
+
+              <div class="form-field">
+                <label for="productCode"> كود المنتج </label>
+
+                <input type="text" id="productCode" readonly />
+
+                <small class="field-hint">
+                  كود المنتج ثابت ولا يتغير أثناء التعديل.
+                </small>
+              </div>
+
+              <!-- CATEGORY -->
+
+              <div class="form-field">
+                <label for="productCategory">
+                  القسم
+                  <b>*</b>
+                </label>
+
+                <select id="productCategory" required>
+                  <option value="">اختر القسم</option>
+
+                  <option value="office">أثاث مكتبي</option>
+
+                  <option value="hotel">أثاث فندقي</option>
+
+                  <option value="home">أثاث منزلي</option>
+                </select>
+              </div>
+
+              <!-- STATUS -->
+
+              <div class="form-field">
+                <label for="productStatus"> حالة المنتج </label>
+
+                <select id="productStatus">
+                  <option value="active">ظاهر</option>
+
+                  <option value="hidden">مخفي</option>
+                </select>
+              </div>
+
+              <!-- MATERIAL -->
+
+              <div class="form-field">
+                <label for="productMaterial"> الخامة </label>
+
+                <input
+                  type="text"
+                  id="productMaterial"
+                  placeholder="مثال: خشب MDF"
+                />
+              </div>
+
+              <!-- DIMENSIONS -->
+
+              <div class="form-field">
+                <label for="productDimensions"> الأبعاد </label>
+
+                <input
+                  type="text"
+                  id="productDimensions"
+                  placeholder="مثال: 120 × 60 × 75 سم"
+                />
+              </div>
+
+              <!-- DESCRIPTION -->
+
+              <div class="form-field full-width">
+                <label for="productDescription"> وصف المنتج </label>
+
+                <textarea
+                  id="productDescription"
+                  placeholder="اكتب وصف المنتج..."
+                ></textarea>
+              </div>
+
+              <!-- FEATURED -->
+
+              <div class="form-field full-width">
+                <label class="checkbox-field">
+                  <input type="checkbox" id="productFeatured" />
+
+                  <span> عرض المنتج كمنتج مميز </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+                     IMAGES
+                ================================================== -->
+
+          <div class="form-card">
+            <div class="form-card-header">
+              <span> PRODUCT IMAGES </span>
+
+              <h3>صور المنتج</h3>
+            </div>
+
+            <div class="form-card-body">
+              <div class="form-field full-width">
+                <div class="image-upload-area">
+                  <!-- PREVIEW -->
+
+                  <div class="product-image-preview" id="imagePreview">
+                    <div class="preview-placeholder">
+                      <span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> </span>
+
+                      <strong> صور المنتج </strong>
+                    </div>
+                  </div>
+
+                  <!-- UPLOAD -->
+
+                  <div class="image-upload-content">
+                    <label for="productImage" class="upload-btn">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> إضافة صور
+                    </label>
+
+                    <input
+                      type="file"
+                      id="productImage"
+                      accept="image/*"
+                      multiple
+                      hidden
+                    />
+
+                    <p>يمكنك إضافة حتى 10 صور.</p>
+
+                    <small>
+                      الصورة الأولى هي الصورة الرئيسية. الحد الأقصى للصورة 5MB.
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+                     COLORS
+                ================================================== -->
+
+          <div class="form-card">
+            <div class="form-card-header">
+              <span> PRODUCT COLORS </span>
+
+              <h3>ألوان المنتج</h3>
+            </div>
+
+            <div class="form-card-body">
+              <div class="form-field full-width">
+                <label for="productColorInput"> إضافة لون </label>
+
+                <div class="color-input-group">
+                  <input
+                    type="text"
+                    id="productColorInput"
+                    placeholder="مثال: بني، أبيض، أسود..."
+                  />
+
+                  <button type="button" id="addColorBtn" class="add-color-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> إضافة
+                  </button>
+                </div>
+
+                <div id="selectedColors" class="selected-colors"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+                     MESSAGE
+                ================================================== -->
+
+          <div id="productFormMessage" class="product-form-message"></div>
+
+          <!-- =================================================
+                     ACTIONS
+                ================================================== -->
+
+          <div class="form-actions">
+            <a href="products.html" class="cancel-btn"> إلغاء </a>
+
+            <button type="submit" class="save-product-btn">
+              <span> ✓ </span>
+
+              حفظ التعديلات
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- FOOTER -->
+
+       <footer class="admin-footer">
+        © 2026  AL-TOQA — لوحة إدارة الكتالوج
+      </footer>
+    </main>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/data.js"></script>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/admin.js"></script>
+
+    <script src="../js/edit-product.js"></script>
+  </body>
+</html>

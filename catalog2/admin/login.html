@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>تسجيل الدخول | لوحة التحكم</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="../assets/images/logo.PNG" />
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Admin CSS -->
+
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+
+  <body class="admin-login-page">
+    <!-- =====================================================
+         LOGIN CONTAINER
+    ====================================================== -->
+
+    <main class="login-container">
+      <!-- =================================================
+             LOGIN CARD
+        ================================================== -->
+
+      <div class="login-card">
+        <!-- =================================================
+                 THEME BUTTON
+            ================================================== -->
+
+        <button
+          type="button"
+          class="theme-btn login-theme-btn"
+          id="themeBtn"
+          aria-label="تغيير الوضع"
+          title="تغيير الوضع"
+        ></button>
+
+        <!-- =================================================
+                 LOGO
+            ================================================== -->
+
+        <div class="login-logo">
+          <div class="admin-logo-icon">
+            <span class="loo"> <img src="../assets/images/logo.PNG" alt="logo" /></span>
+          </div>
+
+          <div class="login-brand">
+            <strong> AL-TOQA </strong>
+
+            <span>
+              <span>التقي لاثاث المكتبي </span>
+            </span>
+          </div>
+        </div>
+
+        <!-- =================================================
+                 LOGIN HEADER
+            ================================================== -->
+
+        <div class="login-header">
+          <span class="login-welcome"> مرحباً بك </span>
+
+          <h1>تسجيل الدخول</h1>
+
+          <p>قم بتسجيل الدخول لإدارة كتالوج المنتجات</p>
+        </div>
+
+        <!-- =================================================
+                 LOGIN FORM
+            ================================================== -->
+
+        <form id="loginForm">
+          <!-- USERNAME -->
+
+          <div class="form-group">
+            <label for="username"> اسم المستخدم </label>
+
+            <div class="input-wrapper">
+              <span class="input-icon"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> </span>
+
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="أدخل اسم المستخدم"
+                autocomplete="username"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- PASSWORD -->
+
+          <div class="form-group">
+            <label for="password"> كلمة المرور </label>
+
+            <div class="password-input">
+              <span class="input-icon"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> </span>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="أدخل كلمة المرور"
+                autocomplete="current-password"
+                required
+              />
+
+              <button
+                type="button"
+                id="togglePassword"
+                aria-label="إظهار كلمة المرور"
+                title="إظهار كلمة المرور"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- LOGIN ERROR -->
+
+          <div class="login-error" id="loginError" role="alert">
+            اسم المستخدم أو كلمة المرور غير صحيحة.
+          </div>
+
+          <!-- LOGIN BUTTON -->
+
+          <button type="submit" class="login-btn">
+            <span> تسجيل الدخول </span>
+
+            <span class="login-arrow"> ← </span>
+          </button>
+        </form>
+
+        <!-- =================================================
+                 DEMO DATA
+            ================================================== -->
+
+        <div class="login-note">
+          <div class="login-note-title">
+            <span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> </span>
+
+            <strong> بيانات التجربة </strong>
+          </div>
+
+          <p class="demo-note">تسجيل الدخول يتم التحقق منه عبر الخادم بشكل آمن. اضبط بيانات الدخول في ملف <code>server/.env</code>.</p>
+        </div>
+
+        <!-- =================================================
+                 BACK TO WEBSITE
+            ================================================== -->
+
+        <a href="../index.html" class="back-to-site">
+          <span> ← </span>
+
+          العودة إلى الموقع
+        </a>
+
+        <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+        <div class="login-footer"> © 2026  AL-TOQA — لوحة إدارة الكتالوج</div>
+      </div>
+
+
+      
+    </main>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/config.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

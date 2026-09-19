@@ -1,0 +1,847 @@
+/* =========================================================
+   CONTACT / QUOTE PAGE
+========================================================= */
+
+.contact-hero {
+    position: relative;
+    padding: 90px 0 80px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(201, 168, 106, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff8f6 0%,
+            #ffffff 55%,
+            #f8f2ed 100%
+        );
+}
+
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(201, 168, 106, 0.2);
+    border-radius: 50%;
+    top: -150px;
+    left: -100px;
+}
+
+.contact-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-hero span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #c9a86a;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.contact-hero h1 {
+    margin: 0 0 18px;
+    color: #333333;
+    font-size: clamp(34px, 5vw, 56px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.contact-hero p {
+    max-width: 720px;
+    margin: 0;
+    color: #777777;
+    font-size: 17px;
+    line-height: 2;
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 40px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   CONTACT INFO
+========================================================= */
+
+.contact-info {
+    position: sticky;
+    top: 30px;
+    padding: 32px;
+    border: 1px solid #eee5df;
+    border-radius: 24px;
+    background: #fffaf8;
+    box-shadow: 0 15px 45px rgba(40, 30, 20, 0.06);
+}
+
+.contact-info-header {
+    margin-bottom: 28px;
+}
+
+.contact-info-header > span {
+    display: block;
+    margin-bottom: 8px;
+    color: #c9a86a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.contact-info-header h2 {
+    margin: 0 0 12px;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.contact-info-header p {
+    margin: 0;
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   CONTACT INFO CARD
+========================================================= */
+
+.contact-info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 0;
+    border-bottom: 1px solid #eee5df;
+}
+
+.contact-info-card:last-of-type {
+    border-bottom: none;
+}
+
+.contact-info-icon {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #ffffff;
+    color: #c9a86a;
+    font-size: 20px;
+    box-shadow: 0 6px 20px rgba(40, 30, 20, 0.06);
+}
+
+.contact-info-card div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.contact-info-card span {
+    color: #999999;
+    font-size: 12px;
+}
+
+.contact-info-card strong {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contact-info-card small {
+    color: #888888;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CONTACT NOTE
+========================================================= */
+
+.contact-note {
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 16px;
+    background: #333333;
+    color: #ffffff;
+}
+
+.contact-note strong {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+
+.contact-note p {
+    margin: 0;
+    color: #dddddd;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   QUOTE CARD
+========================================================= */
+
+.quote-card {
+    padding: 38px;
+    border: 1px solid #eee5df;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 15px 45px rgba(40, 30, 20, 0.06);
+}
+
+.quote-header {
+    padding-bottom: 28px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee5df;
+}
+
+.quote-header > span {
+    display: block;
+    margin-bottom: 8px;
+    color: #c9a86a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.quote-header h2 {
+    margin: 0 0 10px;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.quote-header p {
+    margin: 0;
+    color: #888888;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    color: #444444;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-field label b {
+    color: #c95c5c;
+    font-weight: 800;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e5ddd7;
+    border-radius: 12px;
+    outline: none;
+    background: #fff;
+    color: #333333;
+    font-family: "Cairo", sans-serif;
+    font-size: 13px;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.form-field input,
+.form-field select {
+    height: 52px;
+    padding: 0 15px;
+}
+
+.form-field textarea {
+    min-height: 145px;
+    padding: 14px 15px;
+    resize: vertical;
+    line-height: 1.9;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #b0aaa6;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: #c9a86a;
+    background: #fffdfa;
+    box-shadow: 0 0 0 4px rgba(201, 168, 106, 0.1);
+}
+
+
+/* =========================================================
+   FORM SECTION TITLE
+========================================================= */
+
+.form-section-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 0 3px;
+}
+
+.form-section-title > span {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #f8f0ea;
+    color: #c9a86a;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.form-section-title > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-section-title strong {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.form-section-title small {
+    color: #999999;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FIELD HINT
+========================================================= */
+
+.field-hint {
+    color: #999999;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTACT METHODS
+========================================================= */
+
+.contact-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-method {
+    position: relative;
+    cursor: pointer;
+}
+
+.contact-method input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.contact-method span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
+    padding: 0 17px;
+    border: 1px solid #e5ddd7;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #666666;
+    font-family: "Cairo", sans-serif;
+    font-size: 12px;
+    transition: all 0.25s ease;
+}
+
+.contact-method:hover span {
+    border-color: #c9a86a;
+}
+
+.contact-method input:checked + span {
+    border-color: #c9a86a;
+    background: #faf5ed;
+    color: #a27f3c;
+    box-shadow: 0 5px 15px rgba(201, 168, 106, 0.12);
+}
+
+
+/* =========================================================
+   FORM MESSAGE
+========================================================= */
+
+.quote-form-message {
+    display: none;
+    padding: 14px 17px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.quote-form-message.show {
+    display: block;
+}
+
+.quote-form-message.success {
+    border: 1px solid #cde8d4;
+    background: #f1fbf4;
+    color: #287a3d;
+}
+
+.quote-form-message.error {
+    border: 1px solid #efd0d0;
+    background: #fff5f5;
+    color: #a33b3b;
+}
+
+
+/* =========================================================
+   SUBMIT AREA
+========================================================= */
+
+.quote-submit-area {
+    padding-top: 5px;
+}
+
+.quote-submit-btn {
+    width: 100%;
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    background: #333333;
+    color: #ffffff;
+    font-family: "Cairo", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.quote-submit-btn b {
+    font-size: 19px;
+    transition: transform 0.25s ease;
+}
+
+.quote-submit-btn:hover {
+    transform: translateY(-2px);
+    background: #c9a86a;
+    box-shadow: 0 12px 25px rgba(201, 168, 106, 0.22);
+}
+
+.quote-submit-btn:hover b {
+    transform: translateX(-5px);
+}
+
+.quote-submit-btn:active {
+    transform: translateY(0);
+}
+
+.quote-submit-area > p {
+    margin: 10px 0 0;
+    text-align: center;
+    color: #aaa29d;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.contact-section + .cta {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode .contact-hero {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(201, 168, 106, 0.1),
+            transparent 35%
+        ),
+        #171717;
+}
+
+body.dark-mode .contact-hero h1,
+body.dark-mode .contact-info-header h2,
+body.dark-mode .quote-header h2,
+body.dark-mode .form-section-title strong,
+body.dark-mode .form-field label {
+    color: #f5f5f5;
+}
+
+body.dark-mode .contact-hero p,
+body.dark-mode .contact-info-header p,
+body.dark-mode .quote-header p,
+body.dark-mode .contact-info-card span,
+body.dark-mode .contact-info-card small,
+body.dark-mode .field-hint {
+    color: #aaa;
+}
+
+body.dark-mode .contact-section {
+    background: #111111;
+}
+
+body.dark-mode .contact-info,
+body.dark-mode .quote-card {
+    border-color: #2c2c2c;
+    background: #191919;
+    box-shadow: none;
+}
+
+body.dark-mode .contact-info-card {
+    border-color: #2c2c2c;
+}
+
+body.dark-mode .contact-info-icon {
+    background: #222222;
+}
+
+body.dark-mode .contact-info-card strong {
+    color: #eeeeee;
+}
+
+body.dark-mode .quote-header {
+    border-color: #2c2c2c;
+}
+
+body.dark-mode .form-field input,
+body.dark-mode .form-field select,
+body.dark-mode .form-field textarea {
+    border-color: #333333;
+    background: #202020;
+    color: #eeeeee;
+}
+
+body.dark-mode .form-field input:focus,
+body.dark-mode .form-field select:focus,
+body.dark-mode .form-field textarea:focus {
+    border-color: #c9a86a;
+    background: #222222;
+}
+
+body.dark-mode .form-field input::placeholder,
+body.dark-mode .form-field textarea::placeholder {
+    color: #777;
+}
+
+body.dark-mode .form-section-title > span {
+    background: #29251e;
+}
+
+body.dark-mode .contact-method span {
+    border-color: #333333;
+    background: #202020;
+    color: #aaa;
+}
+
+body.dark-mode .contact-method input:checked + span {
+    background: #29251e;
+    border-color: #c9a86a;
+    color: #d5b77d;
+}
+
+body.dark-mode .contact-note {
+    background: #222222;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .contact-hero {
+        padding: 75px 0 65px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-info {
+        position: static;
+    }
+
+    .contact-info-card {
+        width: calc(50% - 10px);
+        display: inline-flex;
+        vertical-align: top;
+        margin-left: 10px;
+    }
+
+    .contact-note {
+        margin-top: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contact-hero {
+        padding: 60px 0 50px;
+        text-align: center;
+    }
+
+    .contact-hero h1 {
+        font-size: 34px;
+    }
+
+    .contact-hero p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    .contact-info,
+    .quote-card {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .contact-info-header h2,
+    .quote-header h2 {
+        font-size: 25px;
+    }
+
+    .contact-info-card {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+    }
+
+    .contact-method {
+        width: 100%;
+    }
+
+    .contact-method span {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .contact-hero {
+        padding: 50px 0 45px;
+    }
+
+    .contact-hero h1 {
+        font-size: 29px;
+    }
+
+    .contact-info,
+    .quote-card {
+        padding: 20px;
+        border-radius: 17px;
+    }
+
+    .contact-info-header h2,
+    .quote-header h2 {
+        font-size: 22px;
+    }
+
+    .form-section-title {
+        gap: 10px;
+    }
+
+    .form-section-title > span {
+        flex-basis: 35px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .form-field input,
+    .form-field select {
+        height: 49px;
+    }
+
+    .quote-submit-btn {
+        min-height: 54px;
+        font-size: 13px;
+    }
+
+}
+/* =========================================================
+   QUOTE CART
+========================================================= */
+.quote-cart-box {
+    margin: 24px 0;
+    padding: 20px;
+    border: 1px solid #e8e3dc;
+    border-radius: 18px;
+    background: #fff;
+}
+.quote-cart-header { display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:15px; }
+.quote-cart-header span { color:#8b6f47; font-size:11px; font-weight:800; letter-spacing:1px; }
+.quote-cart-header h3 { margin:4px 0 0; font-size:20px; }
+.quote-add-products { color:#8b6f47; font-weight:800; text-decoration:none; white-space:nowrap; }
+.quote-cart-list { display:grid; gap:10px; }
+.quote-cart-item { display:grid; grid-template-columns:64px minmax(0,1fr) auto auto; align-items:center; gap:12px; padding:10px; border:1px solid #eee9e2; border-radius:14px; }
+.quote-cart-item img { width:64px; height:64px; object-fit:cover; border-radius:10px; background:#f4f1ec; }
+.quote-cart-info { min-width:0; }
+.quote-cart-info strong { display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.quote-cart-info small { color:#77736d; }
+.quote-cart-qty { display:flex; align-items:center; gap:5px; }
+.quote-cart-qty button,.quote-cart-qty input { width:34px; height:34px; border:1px solid #ddd5ca; background:#fff; text-align:center; font:inherit; border-radius:8px; }
+.quote-cart-qty button { cursor:pointer; font-weight:800; }
+.quote-cart-remove { border:0; background:transparent; color:#b14b4b; font-size:22px; cursor:pointer; }
+.quote-cart-empty { text-align:center; padding:24px 10px; color:#77736d; }
+.quote-cart-empty div { font-size:30px; }
+.quote-cart-empty strong { display:block; color:#2b2926; margin-top:8px; }
+@media(max-width:600px){
+ .quote-cart-box{padding:14px;margin:18px 0;border-radius:15px}
+ .quote-cart-header h3{font-size:17px}
+ .quote-cart-item{grid-template-columns:48px minmax(0,1fr) auto;gap:8px}
+ .quote-cart-item img{width:48px;height:48px}
+ .quote-cart-qty{grid-column:2 / 3; justify-content:flex-start}
+ .quote-cart-remove{grid-column:3;grid-row:1}
+ .quote-cart-qty button,.quote-cart-qty input{width:31px;height:31px}
+}
+
+/* =========================================================
+   MULTI PRODUCT QUOTE CART
+========================================================= */
+.quote-cart-section { margin: 28px 0; }
+.quote-cart-items { display: grid; gap: 12px; }
+.quote-cart-item { display:grid; grid-template-columns:34px 76px minmax(0,1fr) 150px 38px; align-items:center; gap:14px; padding:14px; background:var(--contact-card,#fff); border:1px solid var(--contact-border,#e8e3dc); border-radius:14px; }
+.quote-cart-number { width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:rgba(197,164,109,.13);color:#9a7b4c;font-weight:800;font-size:12px; }
+.quote-cart-image { width:76px;height:64px;border-radius:10px;overflow:hidden;background:#f4f1ed;display:grid;place-items:center; }
+.quote-cart-image img { width:100%;height:100%;object-fit:cover; }
+.quote-cart-info { min-width:0; }
+.quote-cart-info strong,.quote-cart-info span,.quote-cart-info small { display:block; }
+.quote-cart-info strong { font-size:14px; color:var(--contact-text,#252525); margin-bottom:3px; }
+.quote-cart-info span { color:#9a7b4c; font-size:11px; font-weight:700; margin-bottom:4px; }
+.quote-cart-info small { color:var(--contact-muted,#77736d); font-size:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.quote-cart-quantity label { display:block; color:var(--contact-muted,#77736d); font-size:10px; margin-bottom:5px; }
+.quantity-control { display:flex; align-items:center; border:1px solid var(--contact-border,#e8e3dc); border-radius:9px; overflow:hidden; height:36px; }
+.quantity-control button { width:32px;height:100%;border:0;background:transparent;cursor:pointer;font-size:18px;color:#8b6f47; }
+.quantity-control input { width:55px;height:100%;border:0;border-inline:1px solid var(--contact-border,#e8e3dc);text-align:center;outline:none;background:transparent;font-family:inherit; }
+.quote-cart-remove { width:34px;height:34px;border:0;border-radius:8px;background:rgba(201,76,76,.08);color:#c94c4c;font-size:22px;cursor:pointer; }
+.quote-cart-empty { padding:30px 20px;text-align:center;border:1px dashed var(--contact-border,#e8e3dc);border-radius:14px;background:rgba(255,255,255,.5); }
+.quote-cart-empty[hidden] { display:none; }
+.quote-cart-empty span { display:block;font-size:30px;margin-bottom:8px; }
+.quote-cart-empty strong { display:block;color:var(--contact-text,#252525); }
+.quote-cart-empty p { color:var(--contact-muted,#77736d);font-size:12px;margin:6px 0 14px; }
+.quote-browse-products { display:inline-flex;padding:9px 15px;border-radius:9px;background:#8b6f47;color:#fff;text-decoration:none;font-size:12px;font-weight:700; }
+@media (max-width:700px) {
+  .quote-cart-item { grid-template-columns:28px 58px minmax(0,1fr) 34px; gap:9px; padding:10px; }
+  .quote-cart-image { width:58px;height:58px; }
+  .quote-cart-number { width:26px;height:26px;font-size:10px; }
+  .quote-cart-quantity { grid-column:2 / -1; display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:5px;border-top:1px solid var(--contact-border,#e8e3dc); }
+  .quote-cart-quantity label { margin:0; }
+  .quantity-control { height:34px; }
+  .quote-cart-info strong { font-size:13px; }
+  .quote-cart-info small { font-size:10px; }
+  .quote-cart-remove { grid-column:4;grid-row:1;width:30px;height:30px;font-size:18px; }
+}
+
+
+/* Shared contact actions */
+.contact-info-card a {
+    color: inherit;
+    text-decoration: none;
+}
+.contact-info-card a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.contact-whatsapp-card .contact-info-icon {
+    color: #25d366;
+}
+.contact-whatsapp-card strong a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}

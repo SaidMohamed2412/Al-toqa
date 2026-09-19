@@ -1,0 +1,1722 @@
+/* =========================================================
+   QUOTES PAGE
+========================================================= */
+
+:root {
+  --quotes-primary: #1d2a35;
+  --quotes-primary-dark: #293c4b;
+
+  --quotes-bg: #f5f6f8;
+  --quotes-card: #ffffff;
+  --quotes-border: #e5e7eb;
+
+  --quotes-text: #202020;
+  --quotes-muted: #7b8187;
+
+  --quotes-success: #027a48;
+  --quotes-warning: #c58a24;
+  --quotes-danger: #d92d20;
+
+  --quotes-radius: 16px;
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.dark {
+  --quotes-bg: #171717;
+  --quotes-card: #222222;
+  --quotes-border: #353535;
+
+  --quotes-text: #f5f5f5;
+  --quotes-muted: #aaa;
+
+  --quotes-primary: #e8edf1;
+  --quotes-primary-dark: #ffffff;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.quotes-page-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.quotes-page-header span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--quotes-primary);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.quotes-page-header h2 {
+  margin: 0 0 7px;
+
+  color: var(--quotes-text);
+
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.quotes-page-header p {
+  margin: 0;
+
+  color: var(--quotes-muted);
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.quotes-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+.quote-stat-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  background: var(--quotes-card);
+
+  border: 1px solid var(--quotes-border);
+
+  border-radius: var(--quotes-radius);
+
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.04);
+}
+
+.quote-stat-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: rgba(139, 111, 71, 0.1);
+
+  font-size: 22px;
+}
+
+.quote-stat-card span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--quotes-muted);
+
+  font-size: 12px;
+}
+
+.quote-stat-card strong {
+  color: var(--quotes-text);
+
+  font-size: 24px;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.quotes-toolbar {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 15px;
+
+  padding: 15px;
+
+  background: var(--quotes-card);
+
+  border: 1px solid var(--quotes-border);
+
+  border-radius: var(--quotes-radius);
+}
+
+.quotes-search {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 200px;
+}
+
+.quotes-search span {
+  position: absolute;
+
+  top: 50%;
+  right: 14px;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+.quotes-search input {
+  width: 100%;
+
+  height: 46px;
+
+  box-sizing: border-box;
+
+  padding: 0 42px 0 14px;
+
+  border: 1px solid var(--quotes-border);
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: var(--quotes-bg);
+
+  color: var(--quotes-text);
+
+  font-family: inherit;
+
+  font-size: 13px;
+}
+
+.quotes-search input:focus {
+  border-color: var(--quotes-primary);
+}
+
+.quote-filter {
+  width: 180px;
+
+  height: 46px;
+
+  padding: 0 12px;
+
+  border: 1px solid var(--quotes-border);
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: var(--quotes-bg);
+
+  color: var(--quotes-text);
+
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.refresh-quotes-btn {
+  height: 46px;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: var(--quotes-primary);
+
+  color: #fff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.refresh-quotes-btn:hover {
+  background: var(--quotes-primary-dark);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+.quotes-results {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-bottom: 12px;
+
+  color: var(--quotes-muted);
+
+  font-size: 13px;
+}
+
+.quotes-results strong {
+  color: var(--quotes-primary);
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.quotes-table-wrapper {
+  overflow-x: auto;
+
+  background: var(--quotes-card);
+
+  border: 1px solid var(--quotes-border);
+
+  border-radius: var(--quotes-radius);
+
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.04);
+}
+
+.quotes-table {
+  min-width: 950px;
+}
+
+.quote-row {
+  display: grid;
+
+  grid-template-columns:
+    150px
+    1.3fr
+    1fr
+    1fr
+    120px
+    150px
+    170px;
+
+  align-items: center;
+
+  min-height: 78px;
+
+  border-bottom: 1px solid var(--quotes-border);
+}
+
+.quote-row:last-child {
+  border-bottom: none;
+}
+
+.quote-row.header {
+  min-height: 52px;
+
+  background: var(--quotes-bg);
+
+  color: var(--quotes-muted);
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.quote-row > div {
+  padding: 10px 14px;
+}
+
+.quote-id {
+  color: var(--quotes-primary);
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.customer-info strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--quotes-text);
+
+  font-size: 14px;
+}
+
+.customer-info span {
+  color: var(--quotes-muted);
+
+  font-size: 11px;
+}
+
+.quote-product strong {
+  display: block;
+
+  color: var(--quotes-text);
+
+  font-size: 13px;
+}
+
+.quote-product span {
+  color: var(--quotes-muted);
+
+  font-size: 11px;
+}
+
+.quote-project {
+  color: var(--quotes-text);
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.quote-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 80px;
+
+  min-height: 30px;
+
+  padding: 0 10px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.quote-status.new {
+  background: rgba(197, 138, 36, 0.12);
+
+  color: var(--quotes-warning);
+}
+
+.quote-status.contacted {
+  background: rgba(139, 111, 71, 0.12);
+
+  color: var(--quotes-primary);
+}
+
+.quote-status.completed {
+  background: rgba(46, 139, 87, 0.12);
+
+  color: var(--quotes-success);
+}
+
+.quote-status.cancelled {
+  background: rgba(201, 76, 76, 0.12);
+
+  color: var(--quotes-danger);
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.quote-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.quote-action {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: 1px solid var(--quotes-border);
+
+  border-radius: 8px;
+
+  background: var(--quotes-card);
+
+  color: var(--quotes-text);
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.quote-action:hover {
+  border-color: var(--quotes-primary);
+
+  color: var(--quotes-primary);
+}
+
+.quote-action.delete:hover {
+  border-color: var(--quotes-danger);
+
+  background: rgba(201, 76, 76, 0.08);
+
+  color: var(--quotes-danger);
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.quotes-empty {
+  display: none;
+
+  padding: 70px 20px;
+
+  text-align: center;
+
+  color: var(--quotes-muted);
+}
+
+.quotes-empty.show {
+  display: block;
+}
+
+.quotes-empty-icon {
+  margin-bottom: 15px;
+
+  font-size: 45px;
+}
+
+.quotes-empty h3 {
+  margin: 0 0 8px;
+
+  color: var(--quotes-text);
+
+  font-size: 19px;
+}
+
+.quotes-empty p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.quote-modal,
+.quote-delete-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.quote-modal.show,
+.quote-delete-modal.show {
+  display: flex;
+}
+
+.quote-modal-content {
+  width: min(850px, 100%);
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: var(--quotes-card);
+
+  border-radius: 18px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.quote-modal-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px;
+
+  border-bottom: 1px solid var(--quotes-border);
+}
+
+.quote-modal-header span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--quotes-primary);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.quote-modal-header h3 {
+  margin: 0;
+
+  color: var(--quotes-text);
+
+  font-size: 20px;
+}
+
+.close-quote-modal {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: var(--quotes-bg);
+
+  color: var(--quotes-text);
+
+  cursor: pointer;
+
+  font-size: 25px;
+}
+
+.quote-modal-body {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+
+  padding: 22px;
+}
+
+.quote-detail {
+  padding: 15px;
+
+  border: 1px solid var(--quotes-border);
+
+  border-radius: 12px;
+
+  background: var(--quotes-bg);
+}
+
+.quote-detail.full {
+  grid-column: 1 / -1;
+}
+
+.quote-detail span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--quotes-muted);
+
+  font-size: 11px;
+}
+
+.quote-detail strong {
+  color: var(--quotes-text);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.quote-modal-footer {
+  padding: 18px 22px;
+
+  border-top: 1px solid var(--quotes-border);
+
+  text-align: left;
+}
+
+.modal-close-btn {
+  min-height: 42px;
+
+  padding: 0 20px;
+
+  border: 1px solid var(--quotes-border);
+
+  border-radius: 9px;
+
+  background: var(--quotes-card);
+
+  color: var(--quotes-text);
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   DELETE MODAL
+========================================================= */
+
+.quote-delete-content {
+  width: min(420px, 100%);
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  background: var(--quotes-card);
+
+  text-align: center;
+}
+
+.delete-icon {
+  margin-bottom: 12px;
+
+  font-size: 40px;
+}
+
+.quote-delete-content h3 {
+  margin: 0 0 8px;
+
+  color: var(--quotes-text);
+
+  font-size: 20px;
+}
+
+.quote-delete-content p {
+  margin: 0;
+
+  color: var(--quotes-muted);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.delete-actions {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.delete-actions button {
+  min-height: 42px;
+
+  padding: 0 20px;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-weight: 700;
+}
+
+.delete-cancel-btn {
+  border: 1px solid var(--quotes-border);
+
+  background: var(--quotes-card);
+
+  color: var(--quotes-text);
+}
+
+.delete-confirm-btn {
+  border: none;
+
+  background: var(--quotes-danger);
+
+  color: #fff;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .quotes-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .quotes-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .quotes-toolbar {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .quotes-search,
+  .quote-filter,
+  .refresh-quotes-btn {
+    width: 100%;
+  }
+
+  .quote-modal-body {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-detail.full {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .quotes-page-header h2 {
+    font-size: 23px;
+  }
+
+  .quote-stat-card {
+    padding: 16px;
+  }
+
+  .quote-modal {
+    padding: 10px;
+  }
+
+  .quote-modal-header {
+    padding: 17px;
+  }
+
+  .quote-modal-body {
+    padding: 17px;
+  }
+
+  .quote-modal-footer {
+    padding: 15px;
+  }
+}
+/* =========================================================
+   QUOTE PRICING EDITOR
+========================================================= */
+.quote-client-summary {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.quote-client-summary > div {
+  padding: 12px;
+  border: 1px solid var(--quotes-border);
+  border-radius: 12px;
+  background: var(--quotes-bg);
+}
+.quote-client-summary span,
+.quote-summary-card span,
+.quote-item-details small,
+.quote-item-product small {
+  display: block;
+  color: var(--quotes-muted);
+  font-size: 11px;
+}
+.quote-client-summary strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  word-break: break-word;
+}
+.quote-editor-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 12px;
+}
+.quote-editor-title > span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--quotes-primary);
+  color: #fff;
+  font-weight: 800;
+}
+.quote-editor-title strong {
+  display: block;
+  color: var(--quotes-text);
+}
+.quote-editor-title small {
+  color: var(--quotes-muted);
+}
+.quote-items-table {
+  border: 1px solid var(--quotes-border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.quote-item-row {
+  display: grid;
+  grid-template-columns:
+    42px minmax(180px, 1.3fr) minmax(180px, 1.2fr)
+    90px 130px 130px;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--quotes-border);
+}
+.quote-item-row:last-child {
+  border-bottom: 0;
+}
+.quote-item-head {
+  background: var(--quotes-bg);
+  font-size: 11px;
+  color: var(--quotes-muted);
+  font-weight: 800;
+}
+.quote-item-product {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.quote-item-product img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 9px;
+}
+.quote-item-product strong {
+  display: block;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.quote-item-details {
+  min-width: 0;
+}
+.quote-item-details strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.quote-price-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--quotes-border);
+  border-radius: 9px;
+  background: var(--quotes-card);
+  color: var(--quotes-text);
+  padding: 0 9px;
+  font: inherit;
+}
+.quote-item-qty {
+  text-align: center;
+  font-weight: 800;
+}
+.quote-line-total {
+  font-size: 13px;
+  color: var(--quotes-primary);
+}
+.quote-financial-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+.quote-summary-card {
+  padding: 15px;
+  border: 1px solid var(--quotes-border);
+  border-radius: 14px;
+  background: var(--quotes-card);
+}
+.quote-summary-card strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 18px;
+  color: var(--quotes-text);
+}
+.quote-summary-card.vat strong {
+  color: var(--quotes-warning);
+}
+.quote-summary-card.grand {
+  border-color: var(--quotes-primary);
+}
+.quote-summary-card.grand strong {
+  color: var(--quotes-primary);
+  font-size: 21px;
+}
+.quote-terms-editor label {
+  display: block;
+  color: var(--quotes-text);
+  font-size: 13px;
+  font-weight: 700;
+  margin: 12px 0;
+}
+.quote-terms-editor textarea,
+.quote-terms-editor input {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  border: 1px solid var(--quotes-border);
+  border-radius: 10px;
+  background: var(--quotes-card);
+  color: var(--quotes-text);
+  font: inherit;
+  padding: 10px;
+  resize: vertical;
+}
+.quote-editor-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.quote-editor-footer button {
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 16px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+.quote-primary-action {
+  background: var(--quotes-primary);
+  color: #fff;
+}
+.quote-secondary-action {
+  background: var(--quotes-bg);
+  color: var(--quotes-text);
+  border: 1px solid var(--quotes-border) !important;
+}
+.quote-whatsapp-action {
+  background: #2e8b57;
+  color: #fff;
+}
+.quote-admin-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  pointer-events: none;
+  background: #222;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  z-index: 9999;
+  transition: 0.25s;
+}
+.quote-admin-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 900px) {
+  .quote-client-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .quote-item-row {
+    grid-template-columns:
+      32px minmax(160px, 1.2fr) minmax(140px, 1fr)
+      70px 105px 110px;
+  }
+}
+@media (max-width: 600px) {
+  .quote-client-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+  .quote-item-head {
+    display: none;
+  }
+  .quote-items-table {
+    border: 0;
+    overflow: visible;
+  }
+  .quote-item-row {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    gap: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--quotes-border);
+    border-radius: 13px;
+    background: var(--quotes-card);
+    padding: 10px;
+  }
+  .quote-item-number {
+    grid-row: 1/4;
+    display: grid;
+    place-items: center;
+  }
+  .quote-item-product {
+    grid-column: 2/4;
+  }
+  .quote-item-details {
+    grid-column: 2/4;
+  }
+  .quote-item-qty {
+    grid-column: 2;
+  }
+  .quote-price-input {
+    grid-column: 3;
+  }
+  .quote-line-total {
+    grid-column: 2/4;
+    text-align: right;
+  }
+  .quote-financial-summary {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .quote-modal-content {
+    width: calc(100% - 20px);
+    max-height: 92vh;
+  }
+  .quote-modal-body {
+    padding: 14px;
+  }
+  .quote-editor-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .quote-editor-footer .modal-close-btn {
+    grid-column: 1/3;
+  }
+  .quote-client-summary strong {
+    font-size: 12px;
+  }
+}
+
+.quote-status.priced {
+  background: rgba(139, 111, 71, 0.16);
+  color: var(--quotes-primary-dark);
+}
+@media (max-width: 600px) {
+  .quote-cart-section {
+    margin: 22px 0;
+  }
+  .quote-cart-empty {
+    padding: 24px 14px;
+  }
+  .quote-cart-item {
+    align-items: start;
+  }
+  .quote-cart-info small {
+    max-width: 100%;
+  }
+}
+
+/* QUOTE EDITOR DESKTOP FIX */
+.quote-modal-content {
+  width: min(1180px, calc(100% - 40px));
+}
+.quote-modal-body {
+  grid-template-columns: 1fr;
+}
+.quote-items-editor,
+.quote-financial-summary,
+.quote-terms-editor {
+  grid-column: 1/-1;
+  width: 100%;
+}
+.quote-items-table {
+  width: 100%;
+  overflow-x: auto;
+}
+.quote-item-row {
+  grid-template-columns:
+    42px minmax(180px, 1.1fr) minmax(260px, 1.5fr)
+    80px 150px 150px;
+  min-width: 980px;
+}
+.quote-item-head {
+  min-width: 980px;
+}
+.quote-description-input {
+  width: 100%;
+  min-height: 58px;
+  resize: vertical;
+  border: 1px solid var(--quotes-border);
+  border-radius: 9px;
+  background: var(--quotes-card);
+  color: var(--quotes-text);
+  padding: 8px;
+  font: inherit;
+  line-height: 1.5;
+}
+.quote-description-input:focus,
+.quote-price-input:focus {
+  outline: 2px solid rgba(139, 111, 71, 0.25);
+  border-color: var(--quotes-primary);
+}
+@media (max-width: 600px) {
+  .quote-modal-content {
+    width: calc(100% - 20px);
+  }
+  .quote-item-row {
+    min-width: 0;
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+  }
+  .quote-item-head {
+    min-width: 0;
+  }
+  .quote-description-input {
+    min-height: 55px;
+  }
+}
+
+/* =========================================================
+   MOBILE-SAFE QUOTE PRINTING
+========================================================= */
+#quotePrintSheet {
+  display: none;
+}
+@media print {
+  body.printing-quote > *:not(#quotePrintSheet) {
+    display: none !important;
+  }
+  body.printing-quote {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+  body.printing-quote #quotePrintSheet {
+    display: block !important;
+    direction: rtl;
+    font-family: Arial, "Tahoma", sans-serif;
+    color: #222;
+    padding: 18mm 12mm;
+    line-height: 1.55;
+    background: #fff;
+  }
+  #quotePrintSheet * {
+    box-sizing: border-box;
+  }
+  #quotePrintSheet h1 {
+    margin: 0 0 3px;
+    font-size: 25px;
+  }
+  #quotePrintSheet .muted {
+    color: #777;
+  }
+  #quotePrintSheet .print-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 2px solid #c5a46d;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+  }
+  #quotePrintSheet .print-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin: 12px 0;
+  }
+  #quotePrintSheet .print-info > div {
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    padding: 7px;
+  }
+  #quotePrintSheet .print-info span {
+    display: block;
+    color: #777;
+    font-size: 10px;
+  }
+  #quotePrintSheet .print-info strong {
+    font-size: 12px;
+  }
+  #quotePrintSheet .print-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    table-layout: fixed;
+  }
+  #quotePrintSheet .print-table th,
+  #quotePrintSheet .print-table td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 10px;
+    overflow-wrap: anywhere;
+  }
+  #quotePrintSheet .print-table th {
+    background: #f5f2ed;
+  }
+  #quotePrintSheet .pdf-image-cell {
+    text-align: center !important;
+  }
+  #quotePrintSheet .pdf-product-image {
+    width: 110px;
+    height: 110px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    background: #fafafa;
+    padding: 3px;
+    border-radius: 7px;
+  }
+  #quotePrintSheet .print-summary {
+    width: 270px;
+    max-width: 100%;
+    margin: 14px 0 14px auto;
+  }
+  #quotePrintSheet .print-summary div {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 9px;
+    border-bottom: 1px solid #ddd;
+    font-size: 11px;
+  }
+  #quotePrintSheet .print-summary .grand {
+    font-size: 14px;
+    font-weight: 700;
+    border: 2px solid #c5a46d;
+  }
+  #quotePrintSheet .print-terms {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 12px;
+    font-size: 11px;
+  }
+  #quotePrintSheet .print-terms h3 {
+    font-size: 12px;
+    margin: 7px 0 2px;
+  }
+  #quotePrintSheet .print-footer {
+    text-align: center;
+    color: #777;
+    font-size: 9px;
+    margin-top: 22px;
+  }
+  @page {
+    size: A4;
+    margin: 8mm;
+  }
+}
+
+.quote-price-input,
+.quote-description-input {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.quote-price-input {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px;
+  border: 1px solid var(--quotes-border);
+  border-radius: 9px;
+  background: var(--quotes-card);
+  color: var(--quotes-text);
+}
+.quote-description-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--quotes-border);
+  border-radius: 9px;
+  background: var(--quotes-card);
+  color: var(--quotes-text);
+  resize: vertical;
+}
+
+/* =========================================================
+   QUANTITY EDITOR
+========================================================= */
+.quote-qty-input {
+  width: 100%;
+  min-height: 40px;
+  box-sizing: border-box;
+  border: 1px solid var(--quotes-border);
+  border-radius: 9px;
+  background: var(--quotes-card);
+  color: var(--quotes-text);
+  padding: 8px;
+  text-align: center;
+  font: inherit;
+  font-weight: 700;
+}
+
+/* =========================================================
+   PROFESSIONAL QUOTATION PRINT
+========================================================= */
+#quotePrintSheet {
+  display: none;
+}
+@media print {
+  body.printing-quote > *:not(#quotePrintSheet) {
+    display: none !important;
+  }
+  body.printing-quote {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+  body.printing-quote #quotePrintSheet {
+    display: block !important;
+    direction: rtl;
+    font-family: Cairo, Arial, Tahoma, sans-serif;
+    color: #2c2a27;
+    padding: 8mm 9mm 7mm;
+    line-height: 1.5;
+    background: #fff;
+    font-size: 10px;
+  }
+  #quotePrintSheet * {
+    box-sizing: border-box;
+  }
+  #quotePrintSheet .print-company-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #a7834c;
+  }
+  #quotePrintSheet .print-company-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  #quotePrintSheet .print-company-logo {
+    width: 64px;
+    height: 48px;
+    object-fit: contain;
+  }
+  #quotePrintSheet .print-company-name {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    color: #a7834c;
+    direction: ltr;
+    text-align: right;
+  }
+  #quotePrintSheet .print-company-arabic {
+    font-size: 9px;
+    font-weight: 700;
+    color: #333;
+  }
+  #quotePrintSheet .print-company-contact {
+    max-width: 62%;
+    text-align: left;
+    font-size: 8.5px;
+    color: #666;
+    line-height: 1.7;
+  }
+  #quotePrintSheet .print-company-contact strong {
+    display: block;
+    color: #333;
+    font-size: 9px;
+  }
+  #quotePrintSheet .print-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 9px 0 8px;
+  }
+  #quotePrintSheet .print-kicker {
+    font-size: 7px;
+    letter-spacing: 2.5px;
+    color: #a7834c;
+    direction: ltr;
+  }
+  #quotePrintSheet h1 {
+    margin: 1px 0 3px;
+    font-size: 22px;
+    line-height: 1.1;
+  }
+  #quotePrintSheet .print-quote-number {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: #f3efe8;
+    color: #876c42;
+    font-size: 8px;
+    font-weight: 700;
+    direction: ltr;
+  }
+  #quotePrintSheet .print-date-box {
+    min-width: 125px;
+    padding: 7px 9px;
+    border: 1px solid #ddd6cb;
+    border-radius: 6px;
+    text-align: right;
+  }
+  #quotePrintSheet .print-date-box span {
+    display: block;
+    color: #888;
+    font-size: 7.5px;
+  }
+  #quotePrintSheet .print-date-box strong {
+    display: block;
+    margin-top: 2px;
+    font-size: 9px;
+  }
+  #quotePrintSheet .print-info {
+    display: grid;
+    grid-template-columns: 1.1fr 1.1fr 0.8fr;
+    gap: 6px;
+    margin: 5px 0 9px;
+  }
+  #quotePrintSheet .print-info > div {
+    min-height: 34px;
+    padding: 6px 8px;
+    background: #f8f6f2;
+    border-right: 3px solid #a7834c;
+  }
+  #quotePrintSheet .print-info span {
+    display: block;
+    color: #888;
+    font-size: 7.5px;
+  }
+  #quotePrintSheet .print-info strong {
+    display: block;
+    margin-top: 2px;
+    font-size: 9px;
+  }
+  #quotePrintSheet .print-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 5px 0 5px;
+    font-size: 10px;
+  }
+  #quotePrintSheet .print-section-heading span {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #a7834c;
+    color: #fff;
+    font-size: 7px;
+    font-weight: 800;
+  }
+  #quotePrintSheet .print-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  #quotePrintSheet .print-table th,
+  #quotePrintSheet .print-table td {
+    border: 1px solid #d8d2c9;
+    padding: 4px 4px;
+    vertical-align: middle;
+    font-size: 8px;
+    overflow-wrap: anywhere;
+  }
+  #quotePrintSheet .print-table th {
+    background: #eee9e0;
+    color: #444;
+    font-weight: 800;
+  }
+  #quotePrintSheet .print-table th:nth-child(1),
+  #quotePrintSheet .print-table td:nth-child(1) {
+    width: 4%;
+    text-align: center;
+  }
+  #quotePrintSheet .print-table th:nth-child(2),
+  #quotePrintSheet .print-table td:nth-child(2) {
+    width: 23%;
+    text-align: center;
+  }
+  #quotePrintSheet .print-table th:nth-child(3),
+  #quotePrintSheet .print-table td:nth-child(3) {
+    width: 15%;
+  }
+  #quotePrintSheet .print-table th:nth-child(4),
+  #quotePrintSheet .print-table td:nth-child(4) {
+    width: 29%;
+  }
+  #quotePrintSheet .print-table th:nth-child(5),
+  #quotePrintSheet .print-table td:nth-child(5) {
+    width: 7%;
+    text-align: center;
+  }
+  #quotePrintSheet .print-table th:nth-child(6),
+  #quotePrintSheet .print-table td:nth-child(6) {
+    width: 11%;
+  }
+  #quotePrintSheet .print-table th:nth-child(7),
+  #quotePrintSheet .print-table td:nth-child(7) {
+    width: 12%;
+  }
+  #quotePrintSheet .pdf-product-image {
+   width: 150px;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+  background: tomato;
+  }
+  #quotePrintSheet .col-product strong {
+    display: block;
+    font-size: 8.5px;
+  }
+  #quotePrintSheet .col-product small,
+  #quotePrintSheet .col-details small {
+    display: block;
+    margin-top: 2px;
+    color: #888;
+    font-size: 6.8px;
+  }
+  #quotePrintSheet .col-price,
+  #quotePrintSheet .col-total {
+    direction: rtl;
+    white-space: nowrap;
+  }
+  #quotePrintSheet .col-total {
+    font-weight: 800;
+  }
+  #quotePrintSheet .print-bottom-grid {
+    display: grid;
+    grid-template-columns: 1.45fr 0.75fr;
+    gap: 10px;
+    margin-top: 9px;
+    align-items: start;
+  }
+  #quotePrintSheet .print-terms {
+    border: 1px solid #ddd6cb;
+    border-radius: 6px;
+    padding: 7px 9px;
+    font-size: 7.8px;
+  }
+  #quotePrintSheet .print-term-block + .print-term-block {
+    margin-top: 6px;
+    padding-top: 5px;
+    border-top: 1px solid #eee9e0;
+  }
+  #quotePrintSheet .print-term-block h3 {
+    margin: 0 0 2px;
+    font-size: 8.5px;
+    color: #876c42;
+  }
+  #quotePrintSheet .print-summary {
+    border: 1px solid #ddd6cb;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  #quotePrintSheet .print-summary div {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 5px 7px;
+    border-bottom: 1px solid #e5dfd6;
+    font-size: 8px;
+  }
+  #quotePrintSheet .print-summary div:last-child {
+    border-bottom: 0;
+  }
+  #quotePrintSheet .print-summary .grand {
+    background: #a7834c;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+  }
+  #quotePrintSheet .print-footer {
+    margin-top: 9px;
+    padding-top: 6px;
+    border-top: 1px solid #ddd6cb;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #777;
+    font-size: 6.8px;
+  }
+  #quotePrintSheet .print-footer strong {
+    color: #876c42;
+  }
+  #quotePrintSheet .print-footer small {
+    font-size: 6.5px;
+  }
+  #quotePrintSheet tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  @page {
+    size: A4;
+    margin: 6mm;
+  }
+}
+
+
+/* =========================================================
+   QUOTE CONTACT ACTIONS
+========================================================= */
+.quote-contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+.quote-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 0 13px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid var(--quotes-border, #e8e3dc);
+    background: var(--quotes-card, #fff);
+    color: var(--quotes-text, #252525);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.quote-contact-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 18px rgba(0,0,0,.08);
+}
+.quote-contact-btn.whatsapp { border-color: #bcefcf; color: #128c45; }
+.quote-contact-btn.phone { border-color: #d7e7ff; color: #2563eb; }
+.quote-contact-btn.email { border-color: #eadcff; color: #7c3aed; }
+
+@media (max-width: 700px) {
+    .quote-contact-actions { width: 100%; }
+    .quote-contact-btn { flex: 1 1 90px; }
+}

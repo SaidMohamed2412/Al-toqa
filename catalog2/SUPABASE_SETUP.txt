@@ -1,0 +1,7 @@
+1) افتح server/.env
+2) ضع SUPABASE_URL و SUPABASE_KEY (service_role داخل السيرفر فقط)
+3) تأكد من وجود ADMIN_USERNAME و ADMIN_PASSWORD و JWT_SECRET
+4) من مجلد server شغّل:
+   pip install -r requirements.txt
+   python app.py
+5) اختبر: http://127.0.0.1:5000/api/health

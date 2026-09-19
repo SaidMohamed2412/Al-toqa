@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+# When deployed with the included Node server, /robots.txt adds the correct sitemap URL from SITE_URL.
